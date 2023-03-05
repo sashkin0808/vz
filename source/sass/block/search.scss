@@ -1,0 +1,36 @@
+.search_form {
+	margin-bottom: 96px;
+
+	@media (max-width: 768px) {
+		margin-bottom: 35px;
+	}
+
+	&__control {
+		display: block;
+		width: 100%;
+		max-width: 344px;
+		padding: 24px 24px 24px 56px;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 1.15;
+		color: #EBEEF5;
+	  	background-color: rgba(0, 0, 0, 0.1);
+	  	background-image: url('../img/search.svg');
+	  	background-repeat: no-repeat;
+	  	background-position: 16px center;
+	  	background-size: 24px;
+		border: 1px solid #323B54;
+		border-radius: 12px;
+		transition: border-color 0.2s;
+
+	  	&:hover,
+	  	&:focus {
+	  		outline: none;
+	  		border-color: #EBEEF5;
+	  	}
+	}
+	::-webkit-input-placeholder {color: #475069;}
+	::-moz-placeholder          {color: #475069;}/* Firefox 19+ */
+	:-moz-placeholder           {color: #475069;}/* Firefox 18- */
+	:-ms-input-placeholder      {color: #475069;}
+}

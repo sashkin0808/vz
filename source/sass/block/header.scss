@@ -1,0 +1,14 @@
+.header {
+	padding: 24px 0 ;
+	background: rgba(18, 24, 41, 0.8);
+	backdrop-filter: blur(20px);
+
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__title {
+		color: #A8AEBF;
+	}
+}

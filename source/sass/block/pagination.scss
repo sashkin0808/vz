@@ -1,0 +1,35 @@
+.pagination {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 81px;
+
+	&__btn {
+		width: 120px;
+		max-width: 48%;
+		padding: 20px 5px;
+		text-align: center;
+		font-size: 14px;
+		font-weight: 600;
+		font-family: 'Montserrat', sans-serif;
+		color: #FFFFFF;
+		background: #7B6EF6;
+		border-radius: 5px;
+		border: none;
+		transition: box-shadow 0.2s;
+		cursor: pointer;
+
+		&[disabled] {
+			opacity: 0.1;
+			pointer-events: none;
+		}
+		&:hover,
+		&:focus {
+			outline: none;
+			box-shadow: inset 0 0 10px rgba(0,0,0,0.3);
+		}
+	}
+}
+.loader ~ .pagination,
+.error ~ .pagination {
+	display: none;
+}
