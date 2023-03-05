@@ -64,12 +64,18 @@ const renderItems = async ({direction = 'next', search, firstPage = false}) => {
 	}
 	let visItems = items.slice(startPos, startPos + LIMIT);
     visItems.forEach((item) => {
-        const {nameRu, nameOriginal, posterUrl, ratingKinopoisk} = item;
+        const {nameRu, nameOriginal, posterUrl, ratingKinopoisk, ratingImdb} = item;
+        let rating;
+        if (ratingKinopoisk) {
+            rating = ratingKinopoisk;
+        } else if (ratingImdb) {
+            rating = ratingImdb;
+        }
         $('.items_list').append(`
             <li class="list_item">
                 <div class="list_item__img"><img src=${posterUrl} alt="${nameRu}"/></div>
                 <span class="list_item__name">${nameRu ? nameRu : nameOriginal}</span>
-                <span class="list_item__rating">${ratingKinopoisk}</span>
+                ${rating ? `<span class="list_item__rating">${rating}</span>` : ''}
             </li>`
         );
     });
